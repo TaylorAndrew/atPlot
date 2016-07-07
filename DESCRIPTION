@@ -1,0 +1,20 @@
+Package: atPlot
+Type: Package
+Title: Methods and Wrappers for Plots in R
+Version: 0.1.0
+Author: Andrew Taylor
+Maintainer: Andrew Taylor <taylor.andrew.r@gmail.com>
+Description: This package provides wrappers to plots such as beeswarm plots, and
+    survival plots in ggplot2. Provides methods for panel plots, footnotes in plots
+    and other methods.
+License: What license is it under?
+LazyData: CC0
+Import: beeswarm,
+    gridExtra,
+    ggplot2,
+    grid,
+    plyr
+RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

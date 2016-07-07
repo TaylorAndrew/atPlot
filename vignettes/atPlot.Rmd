@@ -1,0 +1,81 @@
+---
+title: "atPlot"
+author: "Andrew Taylor"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{atPlot}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## ggplot2 Methods and Wrappers:
+
+`ggFootnote()` provides a wrapper for gridExtra methods of adding text outside the margins of a ggplot2 object, commonly needed for in-graphic footnotes.
+
+
+
+Usage: `ggFootnote(plotObject, footnote)`
+
+
+
+`ggSurv()` provides a wrapper for ggplot2 with geom_step and points layers commonly used for kaplan-meier survival curves with censoring.
+
+Usage: `ggSurv(s)`
+
+`multiPlot()` provides a wrapper for grid::grid.layout for panel plotts using ggplot2 objects.
+
+Usage: `multiPlot(...)`
+
+## Other wrapper functions:
+
+`applyLabels()` is a wrapper for `factor()` which will apply a common label to one or more variables in `data.frame`.
+
+Usage: `applyLabels(data = df, varlist = c("var1", "var2"), labels = c("No", "Yes"))`
+
+
+
+`reFactor()` reorders the ordering of the levels of a factor variable. If the order is not given, the factor levels are reverse-ordered.
+
+Usage: `reFactor(x, index_order = c(3, 1, 2))`
+
+
+## Plot methods using base R:
+
+`dichot()` converts a vector to `0` and `1`s, converting all data in matching `group1` to `0` and all data matching `group2` to `1`, with all other data being set to `NA`
+
+Usage: `dichot(x, group1=c("No", "no"), group2=c("Yes", "yes"))`
+
+
+`dummyCode()` creates a standard set of variables dummy coded based on a input vector.
+
+Usage: `dummyCode(x)`
+
+
+`multChoiceCondense()` takes a set of variables in a dataset and collapses them into a single variable.
+
+Usage: `multChoiceCondense(data = df, varList = c())`
+
+
+
+## Other data cleaning methods:
+
+`logical_join()` provides booliean variable appended onto data1, indicating which rows have matching observations in data2
+
+Usage: `logical_join(df1, df2, by =)`
+       `df1 %>% logical_join(df2, by =)`
+
+
+`normalize()` normalize transforms a numeric vector to percentile ranks
+
+Usage: `normalize(x)`
+
+
+`rmOutliers()` converts outleirs (as defined as being some x number of standard deviations from the mean) to either NA, mean +/- x standard deviations, or the mean. 
+
+Usage: `rmOutliers(x, sdCut = 3, method = "remove")`
+
+
+`t_()` is an expansion of the t() function, in which, if x is a data.frame(), it is transposed, and the first column of the output data.frame is the column names from the input data.frame.
+
+Usage: `t_(x)`
