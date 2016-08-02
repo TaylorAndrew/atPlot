@@ -7,7 +7,7 @@
 #'
 #' @examples
 #' #Needs an example
-#' theme_HFHS <- function() {
+theme_HFHS <- function() {
   ggthemes::theme_hc() +
   theme(axis.line = element_line(linetype = "solid"),
     panel.grid.major = element_line(colour = "gray78"),
