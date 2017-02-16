@@ -26,6 +26,7 @@ ggSurv <- function(s,
                    surv.col = 'gg.def',
                    cens.col = 'red',
                    cens.size = 1,
+                   cens.opacity = .05,
                    lty.est = 1,
                    lty.ci = 2,
                    cens.shape = 3,
@@ -75,7 +76,8 @@ ggSurv <- function(s,
                         aes(y = surv),
                         shape = cens.shape,
                         col = cens.col,
-                        size = cens.size)
+                        size = cens.size,
+                        alpha = cens.opacity)
       } else if (plot.cens == T & length(dat.cens) == 0) {
         stop ('There are no censored observations')
       } else
@@ -163,7 +165,8 @@ ggSurv <- function(s,
                         aes(y = surv),
                         shape = cens.shape,
                         col = cens.col,
-                        size = cens.size)
+                        size = cens.size,
+                        alpha = cens.opacity)
       } else if (plot.cens == T & length(dat.cens) == 0) {
         stop ('There are no censored observations')
       } else {pl}
