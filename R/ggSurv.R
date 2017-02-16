@@ -162,7 +162,8 @@ ggSurv <- function(s,
         pl + geom_point(data = dat.cens,
                         aes(y = surv),
                         shape = cens.shape,
-                        col = cens.col)
+                        col = cens.col,
+                        size = cens.size)
       } else if (plot.cens == T & length(dat.cens) == 0) {
         stop ('There are no censored observations')
       } else {pl}
